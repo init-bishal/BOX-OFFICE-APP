@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
         <h1>
-        <Link to="/starred">Go to Starred Page</Link>
+            Home
         </h1>
     </div>
   )

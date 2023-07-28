@@ -3,7 +3,7 @@ import React from 'react'
 const Starred = () => {
   return (
     <div>
-        Starred Page
+        Starred 
     </div>
   )
 }
