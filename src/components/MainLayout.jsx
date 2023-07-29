@@ -8,7 +8,6 @@ const MainLayout = () => {
         <AppTitle/>
         <Navs/>
         <Outlet/>
-        This is MainLayout
     </div>
   )
 }
