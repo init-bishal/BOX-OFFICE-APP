@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { searchForShow,searchForPeople } from '../api/tvmaze'
-import SeachForm from '../components/SeachForm'
+import SeachForm from '../components/SearchForm'
 const Home = () => {
   
   const [apiData,setApiData]=useState(null)
