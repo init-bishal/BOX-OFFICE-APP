@@ -1,28 +1,15 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
 import { getShowById } from '../api/tvmaze'
 const Show = () => {
   const {showId}=useParams()
-  const [showData,setShowData]=useState("")
-  const [showError,setShowError]=useState("")
-  useEffect(()=>{
-      async function fetchData(){
-        try{
-          const data=await getShowById(showId)
-          console.log(data)
-          setShowData(data)
-        }
-        catch(err)
-        {
-          setShowError(err)
-        }
-      }
-      fetchData()
-      
-  },[showId])
+  //queryKey resemble dependency array in useEffect()
+  const {data:showData,error:showError}=useQuery({queryKey:['show',showId],
+                        queryFn:()=>getShowById(showId)
+})
   const renderShowData=()=>{
-    
         if(showError)
         {
           return (
@@ -34,9 +21,7 @@ const Show = () => {
           return(
             <div>{showData.name}</div>
           )
-        }
-
-      
+        } 
   }
   return (
     <div>
