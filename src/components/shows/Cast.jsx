@@ -11,11 +11,6 @@ const Cast = ({cast}) => {
                 <div>
                     {person.name} | {character.name} {voice && '| Voiceover'}
                 </div>
-
-
-
-
-
             </div>
         ))}
     </div>

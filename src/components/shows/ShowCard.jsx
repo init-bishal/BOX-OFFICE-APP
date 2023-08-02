@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 // import {notfound} from '../../../public/'
 const ShowCard = ({name,image,id,summary}) => {
     const summaryStripper=summary?summary.split(" ").slice(0,10).join(' ').replace(/<.+?>/g,'')
@@ -13,7 +12,7 @@ const ShowCard = ({name,image,id,summary}) => {
        <h1>{name}</h1>
         <p>{summaryStripper}...</p>
        <div>
-        <Link to={`/show/${id}`}>Read more </Link>
+        <a href={`/show/${id}`} target='_blank' rel="noreferrer">Read more </a>
         <button type='button'>Star me</button>
        </div>
     </div>
