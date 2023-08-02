@@ -14,10 +14,6 @@ const Home = () => {
     , 
     enabled:!!filter,// it means useQuery is enabled as long filter is empty or null 
   })
-
-
-  
-  
   const onSearch= async({searchStr,searchOptions})=>{
       setFilter({searchStr,searchOptions})
 
