@@ -1,9 +1,6 @@
 import React from 'react'
-
 const ShowsMainData = ({image,name,rating,summary,genres}) => {
-   
     return (
-
     <div>
        <img src={image?image.original : '/not-found-image.png'} alt={name} />
        <div>

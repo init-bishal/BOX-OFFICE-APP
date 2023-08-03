@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useReducer } from 'react'
 import { searchForShow,searchForPeople } from '../api/tvmaze'
 import SeachForm from '../components/SearchForm'
 import ShowGrid from '../components/shows/ShowGrid'
@@ -6,7 +6,7 @@ import ActorGrid from '../components/actors/ActorGrid'
 import { useQuery } from '@tanstack/react-query'
 const Home = () => {
   const [filter,setFilter]=useState(null) ; 
-  // whenever filter will be changed useQuery will be called
+  
   const {data:apiData,error:apiDataError}=useQuery({
     queryKey:['search',filter],
     queryFn:()=>
@@ -38,7 +38,8 @@ const Home = () => {
   return (
     <div>
           <SeachForm onSearch={onSearch}/>
-          
+        
+
           <div>
             {renderApiData()}
           </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Details = ({status,premiered,network}) => {
   return (
     <div>

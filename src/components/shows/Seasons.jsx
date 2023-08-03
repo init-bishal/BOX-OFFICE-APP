@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Seasons = ({seasons}) => {
   return (
     <div>
