@@ -4,6 +4,7 @@ import SeachForm from '../components/SearchForm'
 import ShowGrid from '../components/shows/ShowGrid'
 import ActorGrid from '../components/actors/ActorGrid'
 import { useQuery } from '@tanstack/react-query'
+import styled,{css,ThemeProvider} from 'styled-components'
 const Home = () => {
   const [filter,setFilter]=useState(null) ; 
   
@@ -37,6 +38,7 @@ const Home = () => {
   
   return (
     <div>
+      
           <SeachForm onSearch={onSearch}/>
         
 
