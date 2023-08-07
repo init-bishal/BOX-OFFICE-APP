@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/BOX-OFFICE-APP/static/js/main.e152cf5a.js",
+    "static/js/787.6e354c4d.chunk.js": "/BOX-OFFICE-APP/static/js/787.6e354c4d.chunk.js",
+    "index.html": "/BOX-OFFICE-APP/index.html",
+    "main.e152cf5a.js.map": "/BOX-OFFICE-APP/static/js/main.e152cf5a.js.map",
+    "787.6e354c4d.chunk.js.map": "/BOX-OFFICE-APP/static/js/787.6e354c4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e152cf5a.js"
+  ]
+}
