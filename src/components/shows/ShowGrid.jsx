@@ -1,7 +1,7 @@
 import { useReducer,useEffect} from 'react'
 import useStarredShows from '../../lib/useStarredShows.js'
 import ShowCard from './ShowCard'
-
+import {FlexGrid} from '../common/FlexGrid'
 const ShowGrid = ({apiData}) => {
   const [starredShows,dispatchStarred]=useStarredShows()
   console.log({starredShows})
@@ -16,7 +16,7 @@ const ShowGrid = ({apiData}) => {
         }
   }
   return (
-    <div>
+    <FlexGrid>
         {apiData.map((data)=>(
           <ShowCard key={data.show.id} name={data.show.name }
               image={data.show.image? data.show.image.medium:'/not-found-image.png'}
@@ -26,7 +26,7 @@ const ShowGrid = ({apiData}) => {
               isStarred={starredShows.includes(data.show.id)}
           />
         ))}
-    </div>
+    </FlexGrid>
   )
 }
 

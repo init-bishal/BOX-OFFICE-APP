@@ -5,6 +5,7 @@ import ShowGrid from '../components/shows/ShowGrid'
 import ActorGrid from '../components/actors/ActorGrid'
 import { useQuery } from '@tanstack/react-query'
 import styled,{css,ThemeProvider} from 'styled-components'
+import {TextCenter} from '../components/common/TextCenter'
 const Home = () => {
   const [filter,setFilter]=useState(null) ; 
   
@@ -22,12 +23,12 @@ const Home = () => {
   const renderApiData=()=>{
     if(apiDataError)
     {
-      return <div>Error occured: {apiDataError.message}</div>
+      return <TextCenter>Error occured: {apiDataError.message}</TextCenter>
     }
     // for no results of empty array 
     if(apiData?.length===0)
     {
-      return <div>No results</div>
+      return <TextCenter>No results</TextCenter>
     }
     if(apiData){
       return apiData[0].show ? 
