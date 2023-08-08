@@ -2,6 +2,7 @@ import { useReducer,useEffect} from 'react'
 import useStarredShows from '../../lib/useStarredShows.js'
 import ShowCard from './ShowCard'
 import {FlexGrid} from '../common/FlexGrid'
+import NotFoundImg from '../../lib/not-found-image.png'
 const ShowGrid = ({apiData}) => {
   const [starredShows,dispatchStarred]=useStarredShows()
   console.log({starredShows})
@@ -19,7 +20,7 @@ const ShowGrid = ({apiData}) => {
     <FlexGrid>
         {apiData.map((data)=>(
           <ShowCard key={data.show.id} name={data.show.name }
-              image={data.show.image? data.show.image.medium:'/not-found-image.png'}
+              image={data.show.image? data.show.image.medium:NotFoundImg}
               id={data.show.id}
               summary={data.show.summary}
               onStarMeClick={onStarMeClick}
